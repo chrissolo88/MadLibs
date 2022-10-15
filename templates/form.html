@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}MadLibs FORM{% endblock %}
+{% block content %}
+    <form action="/story/{{story}}" class="col-12">
+        {% for prompt in prompts %}
+            <br>
+            <div class="input-group col-12" >
+            <div class="input-group-prepend" style="height: 39px;">
+            <label for="{{prompt}}" class="input-group-text p-1 align-text-bottom font-weight-bold"><p>{{prompt.capitalize()}}</p></label>
+            </div>
+            <input type="text" class="form-control" placeholder="enter a {{prompt}}" name="{{prompt}}">
+            </div>
+        {% endfor %}
+        <br>
+        <button>GENERATE!</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}MadLibs{% endblock %}
+{% block content %}
+<div class="btn-group m-2 align-center">
+    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      PICK STORY
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        {% for story in story_names %}
+        <a class="dropdown-item" href="/form/{{story}}">{{story}}</a>
+        {% endfor %}
+    </div>
+  </div>
+{% endblock %}
