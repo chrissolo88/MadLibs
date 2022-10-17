@@ -13,7 +13,7 @@ STORY_LIST = {
     'Pizza Time':stories[2]
 }
 
-@app.route('chrissolo88.github.io/MadLibs/')
+@app.route('/')
 def pick_template():
     return render_template('start.html', story_names=STORY_LIST.keys())
 
